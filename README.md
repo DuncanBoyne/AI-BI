@@ -8,9 +8,11 @@ This is the companion repo to my talks — a place to grab the prompts and links
 
 ---
 
+All prompts are model-agnostic — paste them into Claude, ChatGPT, Copilot, or anything that takes text. They get sharper when the agent is connected to your model (see [the toolkit](#the-toolkit)).
+
 ## Review prompts
 
-A set of five "expert reviewer" prompts. Each one puts the model in a specific role and runs a formal review of one layer of a Power BI solution. They're model-agnostic — paste them into Claude, ChatGPT, Copilot, or anything that takes text.
+"Expert reviewer" prompts. Each puts the model in a specific role and runs a formal review of one layer of a Power BI solution.
 
 | # | Prompt | Reviews | Give it |
 |---|--------|---------|---------|
@@ -19,6 +21,30 @@ A set of five "expert reviewer" prompts. Each one puts the model in a specific r
 | 3 | [Documentation Review](prompts/03-documentation-review.md) | Specs, governance, data dictionaries | Your docs |
 | 4 | [UI, UX & Accessibility Review](prompts/04-ui-ux-accessibility-review.md) | Layout, UX, WCAG accessibility | Screenshots / wireframes |
 | 5 | [Does This Fit The Brief?](prompts/05-does-this-fit-the-brief.md) | Requirements vs delivered solution | Requirements + finished report |
+| 6 | [Data Model Review](prompts/06-data-model-review.md) | Star schema, relationships, cardinality | Model diagram / live model |
+| 7 | [Performance Optimisation](prompts/07-performance-optimisation.md) | Slow queries, model size, refresh | Performance Analyzer / live model |
+| 8 | [Security & RLS Review](prompts/08-security-rls-review.md) | RLS, OLS, sharing, access | Roles, filter DAX, access config |
+
+## Build & design prompts
+
+Prompts that help you create rather than critique.
+
+| # | Prompt | Does | Give it |
+|---|--------|------|---------|
+| 9 | [Measure From A Business Question](prompts/09-measure-from-business-question.md) | Turns plain English into correct, tested DAX | The question + your model |
+| 11 | [Requirements To Spec](prompts/11-requirements-to-spec.md) | Turns messy discovery into a buildable spec | Notes / emails / transcripts |
+| 12 | [Report Storyboard](prompts/12-report-storyboard.md) | Plans the report as a story before you build | Audience + metrics + constraints |
+| 13 | [Model Documentation Generator](prompts/13-model-documentation-generator.md) | Generates a living data dictionary | Model objects / live model |
+
+## Explain & communicate prompts
+
+Prompts for understanding and for talking to stakeholders.
+
+| # | Prompt | Does | Give it |
+|---|--------|------|---------|
+| 10 | [DAX Explainer](prompts/10-dax-explainer.md) | Explains a measure in layers, filter context and all | DAX you don't fully get |
+| 14 | [Error Troubleshooter](prompts/14-error-troubleshooter.md) | Diagnoses an error and explains the fix | Error message + context |
+| 15 | [Stakeholder Narrative](prompts/15-stakeholder-narrative.md) | Turns the numbers into a decision-ready story | Metrics + trends + audience |
 
 👉 **[How to use the prompts](guides/how-to-use-the-prompts.md)** — the workflow, getting better results, and running them as a pre-sign-off sequence.
 
@@ -47,7 +73,17 @@ AI-BI/
 │   ├── 02-dax-review.md
 │   ├── 03-documentation-review.md
 │   ├── 04-ui-ux-accessibility-review.md
-│   └── 05-does-this-fit-the-brief.md
+│   ├── 05-does-this-fit-the-brief.md
+│   ├── 06-data-model-review.md
+│   ├── 07-performance-optimisation.md
+│   ├── 08-security-rls-review.md
+│   ├── 09-measure-from-business-question.md
+│   ├── 10-dax-explainer.md
+│   ├── 11-requirements-to-spec.md
+│   ├── 12-report-storyboard.md
+│   ├── 13-model-documentation-generator.md
+│   ├── 14-error-troubleshooter.md
+│   └── 15-stakeholder-narrative.md
 └── guides/
     ├── how-to-use-the-prompts.md
     └── tools.md
